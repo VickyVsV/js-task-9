@@ -10,7 +10,9 @@ refs.btnStop.addEventListener('click', onBtnStop);
 refs.btnStop.disabled = true;
 
 function onBtnStart() {
-  timerId = setInterval(onChangeBodyColor, 1000);
+  timerId = setInterval(() => {
+    onChangeBodyColor()
+  }, 1000);
   refs.btnStop.disabled = false;
   refs.btnStart.disabled = true;
 }
